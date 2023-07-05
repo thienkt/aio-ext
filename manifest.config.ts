@@ -11,6 +11,7 @@ const [major, minor, patch, label = '0'] = version
   .split(/[.-]/)
 
 export default defineManifest(async (env) => ({
+  default_locale: 'en',
   name: env.mode === 'staging' ? `[INTERNAL] ${name}` : name,
   // up to four numbers separated by dots
   version: `${major}.${minor}.${patch}.${label}`,

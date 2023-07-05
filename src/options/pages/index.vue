@@ -2,8 +2,10 @@
 
 <template>
   <div class="text-center m-4">
-    <h1 class="text-3xl font-bold underline pb-6">Hello world from Options!</h1>
-
+    <h1 class="text-3xl font-bold underline pb-6">TITLE_____________!</h1>
+    <button class="w-12 h-4 bg-red-500 rounded-sm block m-auto">
+      {{ $i18n('save') }}
+    </button>
     <RouterLink to="/about">About</RouterLink>
   </div>
 </template>

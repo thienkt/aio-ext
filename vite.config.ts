@@ -5,7 +5,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
-import { defineConfig } from 'vite'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
+import { defineConfig, normalizePath } from 'vite'
 import Pages from 'vite-plugin-pages'
 import manifest from './manifest.config'
 
@@ -67,6 +68,20 @@ export default defineConfig({
     Icons({
       autoInstall: true,
       compiler: 'vue3',
+    }),
+
+    // move locales file to dist folder
+    viteStaticCopy({
+      targets: [
+        {
+          src: normalizePath(resolve(__dirname, './src/locales') + '/[!.]*'),
+          dest: './_locales/',
+          overwrite: true,
+        },
+      ],
+      watch: {
+        reloadPageOnChange: true,
+      },
     }),
 
     // rewrite assets to use relative path
