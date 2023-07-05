@@ -1,12 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <header
-    aria-label="Site Header"
-    class="bg-gray-50"
-  >
-    Options Header
-  </header>
+  <Header />
 
   <RouterView></RouterView>
 

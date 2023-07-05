@@ -9,7 +9,27 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    DarkModeToggle: typeof import('./components/organisms/layouts/ThemeToggle.vue')['default']
+    Header: typeof import('./components/templates/layouts/Header.vue')['default']
+    IMdiAccount: typeof import('~icons/mdi/account')['default']
+    IMdiArtstation: typeof import('~icons/mdi/artstation')['default']
+    IMdiBell: typeof import('~icons/mdi/bell')['default']
+    IMdiBellOutline: typeof import('~icons/mdi/bell-outline')['default']
+    IMdiCrosshairsQuestion: typeof import('~icons/mdi/crosshairs-question')['default']
+    IMdiEarth: typeof import('~icons/mdi/earth')['default']
+    IMdiGear: typeof import('~icons/mdi/gear')['default']
+    IMdiHome: typeof import('~icons/mdi/home')['default']
+    IMdiHomeOutline: typeof import('~icons/mdi/home-outline')['default']
+    IMdiMagnify: typeof import('~icons/mdi/magnify')['default']
+    IMdiSearch: typeof import('~icons/mdi/search')['default']
+    IMdiTransitConnection: typeof import('~icons/mdi/transit-connection')['default']
+    IMdiWeatherNight: typeof import('~icons/mdi/weather-night')['default']
+    IMdiWhiteBalanceSunny: typeof import('~icons/mdi/white-balance-sunny')['default']
+    IMdiWhiteWeatherNight: typeof import('~icons/mdi/white-weather-night')['default']
+    NotificationMenu: typeof import('./components/organisms/layouts/NotificationMenu.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ThemeToggle: typeof import('./components/organisms/layouts/ThemeToggle.vue')['default']
+    UserProfileMenu: typeof import('./components/organisms/layouts/UserProfileMenu.vue')['default']
   }
 }
